@@ -1,5 +1,5 @@
 <p align="center" style="margin:0;padding:0">
-  <img src="public/logo.png"
+  <img src="public/banner.png"
        alt="Glass Preset Logo"
        style="display:block;width:100%;height:calc(100% - 200px);object-fit:cover;object-position:center top;">
 </p>
