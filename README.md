@@ -1,5 +1,7 @@
-<p align="center">
-  <img src="public/logo.png" width="240" alt="Glass Preset Logo">
+<p align="center" style="margin:0;padding:0">
+  <img src="public/logo.png"
+       alt="Glass Preset Logo"
+       style="display:block;width:100%;height:calc(100% - 200px);object-fit:cover;object-position:center top;">
 </p>
 
 <h1 align="center">@your-scope/glass-preset</h1>
