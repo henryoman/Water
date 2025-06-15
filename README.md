@@ -4,7 +4,7 @@
        style="display:block;width:100%;height:calc(100% - 200px);object-fit:cover;object-position:center top;">
 </p>
 
-<h1 align="center">@your-scope/glass-preset</h1>
+<h1 align="center">water</h1>
 <p align="center">
   Liquid-Glass utilities &amp; tokens for Tailwind CSS v4.  
   One preset &nbsp;—&nbsp; works in **React, Vue, Svelte, Astro, plain HTML** (anything that runs Tailwind).
