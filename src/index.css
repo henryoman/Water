@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+@theme {/* spacing / radii */
+  --space-3:   0.75rem;         /* 12 px  */
+  --radius-4:  1rem;            /* 16 px  */
+  
+  /*  Tailwind 4 tokens  */
+  --glass-blur:       12px;                 /* tweak to taste */
+  --glass-saturate:   140%;                 /* >100% = punchier colour */
+  --glass-fill:       rgba(40 45 50 / 0.25);
+  --glass-edge:       rgba(227 231 238 / .04);
+  
+  /* ===  Widget tokens (still always-dark)  === */
+  --widget-grad-start:  rgba(19 22 35 / .72);      /* top */
+  --widget-grad-end:    rgba(10 12 22 / .92);      /* bottom */
+  --widget-edge:        rgba(255 255 255 / .2);   /* highlight rim */
+}
+
+:root {
+  --primary: #343d46;
+  --primary-light: #434C5B;
+  --secondary: #0c111c;
+  --secondary-light: #0c141c;
+  --background: #070a0e;
+  --background-other: #00070e;
+  --bubblebackground: #14151c;
+  --card-background: #0a0e13;
+  --card: #18191b;
+  --text: #e3e7ee;
+  --text-secondary: #b7becb;
+  --text-muted: #6b7280;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --success: #63ba83;
+  --warning: #e2cc5f;
+  --danger: #8f2a2a;
+  --body-text-size: 0.925rem;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+/* iPhone-style card with rounded corners */
+.card {
+  background-color: var(--card-background);
+  border-radius: 16px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+/* Progress bar styling */
+.progress-bar {
+  height: 4px;
+  border-radius: 2px;
+  background-color: #333333;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--primary);
+}
+
+/* iPhone-style navigation items */
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.bottom-nav-item.active {
+  color: var(--text);
+}
+
+/* Chat message styling */
+.chat-message {
+  box-sizing: border-box;
+  border-radius: 1.25rem;
+  margin-bottom: 12px;
+  max-width: 90%;
+  font-size: var(--body-text-size);
+  font-weight: 200;
+  padding: 10px 14px;
+}
+
+.chat-message.ai {
+  background-color: var(--bubblebackground);
+  color: var(--text);
+  outline: 1px solid var(--primary);
+  margin-right: auto;
+}
+
+.chat-message.user {
+  background-color: var(--primary);
+  color: var(--text);
+  margin-left: auto;
+}
+
+button, input, textarea, select {
+  border-radius: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 200;
+}
+
+/* Prevent mobile zoom on input focus */
+@media screen and (max-width: 767px) {
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+}
+
+/* Custom focus styling for inputs */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--text-muted);
+  box-shadow: 0 0 0 2px rgba(107, 114, 128, 0.2);
+}
+
+/*  Utility layer  */
+@layer utilities {
+  .glass {
+    /* single GPU filter pass: blur ➜ saturate */
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+
+    /* dark translucent body */
+    background: var(--glass-fill);
+
+    /* brighter edge + faint inner glow for "glassier" pop */
+    box-shadow:
+      inset 0 0   0 1px   var(--glass-edge),
+      inset 0 1px 4px 1px var(--glass-edge);
+
+    border-radius: .875rem; /* 14 px default */
+  }
+
+  /* ===  .widget (no blur, no saturate)  === */
+  .widget {
+    background:
+      linear-gradient(180deg,
+        var(--bubblebackground) 0%,
+        var(--secondary)   100%);
+        
+    border-color: var(--bubblebackground);
+
+    border-radius: 1.25rem;  /* 20 px */
+    padding: 1rem;
+  }
+}
