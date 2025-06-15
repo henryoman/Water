@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">water</h1>
-<p align="center">
+<p align="left">
   Liquid-Glass utilities &amp; tokens for Tailwind CSS v4.  
   One preset &nbsp;—&nbsp; works in **React, Vue, Svelte, Astro, plain HTML** (anything that runs Tailwind).
 </p>
