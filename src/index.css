@@ -1,20 +1,5 @@
 @import "tailwindcss";
-
-@theme {/* spacing / radii */
-  --space-3:   0.75rem;         /* 12 px  */
-  --radius-4:  1rem;            /* 16 px  */
-  
-  /*  Tailwind 4 tokens  */
-  --glass-blur:       12px;                 /* tweak to taste */
-  --glass-saturate:   140%;                 /* >100% = punchier colour */
-  --glass-fill:       rgba(40 45 50 / 0.25);
-  --glass-edge:       rgba(227 231 238 / .04);
-  
-  /* ===  Widget tokens (still always-dark)  === */
-  --widget-grad-start:  rgba(19 22 35 / .72);      /* top */
-  --widget-grad-end:    rgba(10 12 22 / .92);      /* bottom */
-  --widget-edge:        rgba(255 255 255 / .2);   /* highlight rim */
-}
+@import "./theme.css" layer(theme);
 
 :root {
   --primary: #343d46;
@@ -86,7 +71,7 @@ body {
 }
 
 /* Chat message styling */
-.chat-message {
+.chat-bubble{
   box-sizing: border-box;
   border-radius: 1.25rem;
   margin-bottom: 12px;
@@ -96,14 +81,14 @@ body {
   padding: 10px 14px;
 }
 
-.chat-message.ai {
+.chat-bubble.ai {
   background-color: var(--bubblebackground);
   color: var(--text);
   outline: 1px solid var(--primary);
   margin-right: auto;
 }
 
-.chat-message.user {
+.chat-bubble.user {
   background-color: var(--primary);
   color: var(--text);
   margin-left: auto;
