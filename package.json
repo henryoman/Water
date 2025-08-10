@@ -1,12 +1,20 @@
 {
   "name": "glass",
-  "module": "index.ts",
+  "version": "0.1.0",
+  "description": "Liquid-Glass utilities & tokens for Tailwind CSS v4.",
   "type": "module",
-  "private": true,
-  "devDependencies": {
-    "@types/bun": "^1.2.16"
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc"
   },
-  "peerDependencies": {
+  "devDependencies": {
+    "@types/bun": "^1.2.16",
     "typescript": "^5.8.3"
   },
   "dependencies": {
