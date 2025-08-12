@@ -1,16 +1,23 @@
 {
   "name": "glass",
-  "module": "index.ts",
+  "version": "0.1.0",
   "type": "module",
-  "private": true,
+  "private": false,
+  "main": "tailwind-preset.js",
+  "types": "tailwind-preset.ts",
+  "files": [
+    "src",
+    "tailwind-preset.ts",
+    "tailwind-preset.js"
+  ],
   "devDependencies": {
-    "@types/bun": "^1.2.16"
+    "@types/bun": "^1.2.19"
   },
   "peerDependencies": {
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.1.10",
-    "tailwindcss": "^4.1.10"
+    "@tailwindcss/postcss": "^4.1.11",
+    "tailwindcss": "^4.1.11"
   }
 }

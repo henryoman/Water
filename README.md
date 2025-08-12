@@ -6,7 +6,7 @@
 
 <h1 align="center">water</h1>
 <p align="left">
-  Liquid-Glass utilities &amp; tokens for Tailwind CSS v4.  
+  Liquid-Glass utilities & tokens for Tailwind CSS v4.
   One preset &nbsp;—&nbsp; works in **React, Vue, Svelte, Astro, plain HTML** (anything that runs Tailwind).
 </p>
 
@@ -27,6 +27,32 @@ No React dependency, no JS bundles, < **3 kB** minified.
 ## 🔧 Installation
 
 ```bash
-bun add -D @your-scope/glass-preset      # bun
-# npm  install -D @your-scope/glass-preset
-# pnpm add  -D @your-scope/glass-preset
+bun add -D glass        # bun
+# npm  install -D glass
+# pnpm add  -D glass
+```
+
+## ⚙️ Usage
+
+### Option 1: Tailwind preset
+
+```ts
+// tailwind.config.ts
+import preset from "glass";
+
+export default {
+  presets: [preset],
+};
+```
+
+### Option 2: Direct CSS import
+
+```css
+@import "glass/src/index.css";
+```
+
+You can also pull the CSS from a CDN once published:
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/glass/src/index.css">
+```
