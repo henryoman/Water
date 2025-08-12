@@ -6,7 +6,7 @@
 
 <h1 align="center">water</h1>
 <p align="left">
-  Liquid-Glass utilities &amp; tokens for Tailwind CSS v4.  
+  Liquid-Glass utilities &amp; tokens for Tailwind CSS v4.
   One preset &nbsp;—&nbsp; works in **React, Vue, Svelte, Astro, plain HTML** (anything that runs Tailwind).
 </p>
 
@@ -16,6 +16,7 @@
 | What you get | Class | CSS cost |
 |--------------|-------|----------|
 | GPU-blurred, saturated “glass” panel | `.glass` | backdrop-blur + edge sheen |
+| Glass variants: size + texture | `.glass-sm`, `.glass-lg`, `.glass-noise`, `.glass-sheen` | tweak blur & overlays |
 | Widget block (no blur, axial gradient) | `.widget` | dual-tone gradient + rim |
 | Icon / tile with dual rim | `.tile` | razor rim + inner glow |
 | Design tokens | `--glass-*`, `--widget-*` | tweak in one place |
@@ -30,3 +31,12 @@ No React dependency, no JS bundles, < **3 kB** minified.
 bun add -D @your-scope/glass-preset      # bun
 # npm  install -D @your-scope/glass-preset
 # pnpm add  -D @your-scope/glass-preset
+```
+
+## 💡 Usage
+
+```html
+<div class="glass glass-lg glass-noise p-6">
+  <!-- content -->
+</div>
+```

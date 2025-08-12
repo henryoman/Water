@@ -1,18 +1,31 @@
 @import "tailwindcss";
 
-
-@theme {/* spacing / radii */
+@theme {
+    /* spacing / radii */
     --space-3:   0.75rem;         /* 12 px  */
     --radius-4:  1rem;            /* 16 px  */
-    
+
     /*  Tailwind 4 tokens  */
     --glass-blur:       12px;                 /* tweak to taste */
     --glass-saturate:   140%;                 /* >100% = punchier colour */
     --glass-fill:       rgba(40 45 50 / 0.25);
     --glass-edge:       rgba(227 231 238 / .04);
-    
+
+    /* extra glass variant tokens */
+    --glass-blur-sm:     4px;
+    --glass-blur-lg:     20px;
+    --glass-saturate-sm: 120%;
+    --glass-saturate-lg: 180%;
+    --glass-texture: none;
+    --glass-texture-noise: repeating-linear-gradient(45deg, rgba(255 255 255 / .06) 0, rgba(255 255 255 / .06) 1px, transparent 1px, transparent 3px);
+    --glass-texture-sheen: linear-gradient(135deg, rgba(255 255 255 / .25) 0%, rgba(255 255 255 / 0) 60%);
+
     /* ===  Widget tokens (still always-dark)  === */
     --widget-grad-start:  rgba(19 22 35 / .72);      /* top */
     --widget-grad-end:    rgba(10 12 22 / .92);      /* bottom */
     --widget-edge:        rgba(255 255 255 / .2);   /* highlight rim */
+
+    /* tile tokens */
+    --tile-edge: rgba(255 255 255 / .1);
+    --tile-glow: rgba(0 0 0 / .3);
 }
